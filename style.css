@@ -1,1 +1,27 @@
+h1{
+    text-decoration: underline;
+    text-align: center;
+}
 
+#calculator{
+    width: 40%;
+    height: 70%;
+    min-width: 300px;
+    min-height: 400px;
+    border: 2px solid black;
+}
+#display-container{
+    width: 100%;
+    height: 20%;
+    font-size: 2.8rem;
+    color: blue;
+    border: 2px solid black;
+}
+.button{
+    width: 25%;
+    height: 20%;
+    display: inline-block;
+    font-size: 1.8rem;
+    color: black;
+    border: 2px solid black;
+}
