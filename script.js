@@ -78,6 +78,7 @@ function logic(){
             display.innerText='';
             break;
         case '+/-':
+            if(display.textContent=='') return;
             operand1=-1*parseFloat(display.textContent);
             display.innerText=operand1;
             break;
