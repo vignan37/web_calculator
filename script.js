@@ -77,6 +77,10 @@ function logic(){
             operand1=parseFloat(display.textContent);
             display.innerText='';
             break;
+        case '+/-':
+            operand1=-1*parseFloat(display.textContent);
+            display.innerText=operand1;
+            break;
         case '=':
             operand2=parseFloat(display.textContent);
             var result = eval(operand1+ ' ' + operator + ' ' + operand2);
