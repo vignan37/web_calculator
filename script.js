@@ -3,6 +3,7 @@ var buttons = document.getElementsByClassName("button");
 var operand1 = null;
 var operand2= null;
 var operator = null;
+var error = false;
 
 for(var i=0;i<buttons.length;i++){
     buttons[i].addEventListener('click',logic);
@@ -13,8 +14,24 @@ function logic(){
     //directly clicks operator error without first operand
     if(display.textContent=='' && (value=='+' || value=='-' || value=='/' || value=='*' || value=='.' || value=='=' || value=='%')){
         display.innerText='Error';
+        error=true;
         return;
     }
+
+    //if after an error they enter a number.
+    if(error==true && !(value=='+' || value=='-' || value=='/' || value=='*' || value=='.' || value=='=' || value=='%')){
+        display.innerText=''
+        error=false;
+    }
+
+    //check previous error and remove text
+    if(error==true && (value=='+' || value=='-' || value=='/' || value=='*' || value=='.' || value=='=' || value=='%')){
+        display.innerText='Error';
+        return;
+    }
+    
+    
+
     switch(value){
         case 'AC':
             display.innerText='';
@@ -56,5 +73,6 @@ function logic(){
             display.innerText +=value;
 
     }
+    
 
 }
