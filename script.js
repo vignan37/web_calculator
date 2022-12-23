@@ -8,6 +8,19 @@ var error = false;
 for(var i=0;i<buttons.length;i++){
     buttons[i].addEventListener('click',logic);
 }
+for(var i=0;i<buttons.length;i++){
+    buttons[i].addEventListener('mouseover',mouseon);
+}
+for(var i=0;i<buttons.length;i++){
+    buttons[i].addEventListener('mouseout',mouseoff);
+}
+
+function mouseon(){
+    this.style.backgroundColor = 'orange';
+}
+function mouseoff(){
+    this.style.backgroundColor = '';
+}
 
 function logic(){
     var value = this.getAttribute('data-value');

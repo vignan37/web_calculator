@@ -3,19 +3,30 @@ h1{
     text-align: center;
 }
 
+#title-text{
+    width: 100%;
+    height: 20%;
+    min-width: 250px;
+    max-height: 70px;
+    color: blue;
+    border: 2px solid black;
+}
+
 #calculator{
     width: 40%;
-    height: 70%;
-    min-width: 300px;
-    min-height: 400px;
+    height: 60%;
+    min-width: 250px;
+    min-height: 200px;
     border: 2px solid black;
 }
 #display-container{
     width: 100%;
     height: 20%;
+    max-width: 100%;
     font-size: 2.8rem;
     color: blue;
     border: 2px solid black;
+    word-wrap:break-word;
 }
 #zero{
     width: 47%;
@@ -27,7 +38,7 @@ h1{
     text-align: center;
 }
 .button{
-    width: 22%;
+    width: 22.2%;
     height: 20%;
     display: inline-block;
     font-size: 1.8rem;
