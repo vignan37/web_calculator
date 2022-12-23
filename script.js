@@ -13,10 +13,13 @@ function logic(){
     if(value=='+'){
         operator = '+';
         operand1=parseFloat(display.textContent);
-        display.innerText = '';
+        display.innerText='';
     }
     else if(value=='='){
         operand2=parseFloat(display.textContent);
+        var result = eval(operand1+ ' ' + operator + ' ' + operand2);
+        display.innerText=result;
+
     }
     else{
         display.innerText +=value;
