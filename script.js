@@ -1,6 +1,6 @@
 var output = document.getElementById("display");
 var buttons = document.getElementsByClassName("button");
-var operand1 = 0;
+var operand1 = null;
 var operand2= null;
 var operator = null;
 
@@ -10,10 +10,15 @@ for(var i=0;i<buttons.length;i++){
 
 function logic(){
     var value = this.getAttribute('data-value');
+    //directly clicks operator error without first operand
+    if(display.textContent=='' && (value=='+' || value=='-' || value=='/' || value=='*' || value=='.' || value=='=' || value=='%')){
+        display.innerText='Error';
+        return;
+    }
     switch(value){
         case 'AC':
             display.innerText='';
-            operand1=0;
+            operand1=null;
             operand2=null;
             operator=null;
             break;
@@ -34,6 +39,11 @@ function logic(){
             break;
         case '%':
             operator = '%';
+            operand1=parseFloat(display.textContent);
+            display.innerText='';
+            break;
+        case '*':
+            operator = '*';
             operand1=parseFloat(display.textContent);
             display.innerText='';
             break;
