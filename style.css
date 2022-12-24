@@ -1,33 +1,47 @@
-h1{
-    text-decoration: underline;
+
+#calculator h1 {
+    background-color: #D9514EFF;
+    color: #2A2B2DFF;
+    text-transform: uppercase;
     text-align: center;
+    padding: 10px;
+    text-decoration: underline;
 }
 
-#title-text{
+#calculator {
+    width: 45%;
+    height: 80%;
+    min-width: 300px;
+    min-height: 400px;
+    background-color: #2A2B2DFF;
+    margin: auto;
+    margin-top: 80px;
+    border: 2px solid lightgray;
+    border-radius: 2px;
+    padding: 10px;
+}
+
+
+#display-container {
+    font-size: 2.8rem;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    color: #2A2B2DFF;
     width: 100%;
     height: 20%;
-    min-width: 250px;
-    max-height: 70px;
-    color: black;
-    border: 2px solid black;
-}
-
-#calculator{
-    width: 40%;
-    height: 60%;
-    min-width: 250px;
-    min-height: 200px;
-    border: 2px solid black;
-}
-#display-container{
-    width: 100%;
-    height: 50%;
-    max-width: 100%;
-    font-size: 2rem;
-    color: blue;
-    border: 2px solid black;
+    min-height: 100px;
+    border-radius: 2px;
+    background-color:  #D9514EFF;
+    margin-bottom: 10px;
     word-wrap:break-word;
 }
+
+#display-container p {
+    margin: 0.5rem;
+    vertical-align: text-bottom;
+}
+
 #zero{
     width: 47%;
     height: 20%;
@@ -41,8 +55,10 @@ h1{
     width: 22.2%;
     height: 20%;
     display: inline-block;
+    align-items: center;
     font-size: 1.8rem;
-    color: black;
+    color: #2A2B2DFF;
     border: 2px solid black;
     text-align: center;
+    background-color: #2DA8D8FF;
 }
